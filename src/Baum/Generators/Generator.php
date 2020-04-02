@@ -77,17 +77,17 @@ abstract class Generator {
    * @param string $input
    * @return string
    */
-  protected function classify($input) {
-    return studly_case(str_singular($input));
-  }
+    protected function classify($input) {
+        return \Str::studly(\Str::singular($input));
+    }
 
-  /**
-   * Inflect to table name
-   *
-   * @param string $input
-   * @return string
-   */
-  protected function tableize($input) {
-    return snake_case(str_plural($input));
-  }
+    /**
+     * Inflect to table name
+     *
+     * @param string $input
+     * @return string
+     */
+    protected function tableize($input) {
+        return \Str::snake(\Str::plural($input));
+    }
 }
